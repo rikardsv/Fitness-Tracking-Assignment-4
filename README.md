@@ -1,15 +1,28 @@
-# Fitness Tracking app
+# Fitness Tracking App
+A group project for IDATG2002 – Databases. A fitness tracking web application built with Streamlit, using SQLite as the database and Plotly for data visualization.
 
-This assignment is a group project where we create an app using Streamlit, a Python framework that turns scripts into interactive web apps.
-
-## Group members
+## Group Members
 - Andreas Danielsen Fageraas
 - Johannes Nupen Theigen
 - Erik Thoreplass
 - Rikard Svalbjørg
 
 ## About the Project
+The app implements CRUD operations for Users and Health Metrics, and includes a visualization showing average health metric values grouped by activity level.
 
-## How to run
+## How to Run
+1. Clone the repository:
+```bash
+   git clone https://github.com/rikardsv/Fitness-Tracking-Assignment-4.git
+   cd Fitness-Tracking-Assignment-4
+```
+2. Install dependencies:
+```bash
+   pip install streamlit plotly pandas
+```
+3. Run the app:
+```bash
+   streamlit run main.py
+```
 
 ## Project Structure
