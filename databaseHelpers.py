@@ -1,7 +1,11 @@
 import sqlite3
 import hashlib
+import os
 
-from main import DB_NAME
+# Get the directory where this script is located
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+# Join it with the filename to get an absolute path
+DB_NAME = os.path.join(BASE_DIR, "fitness.db")
 
 
 # -------------------------
