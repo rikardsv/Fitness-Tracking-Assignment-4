@@ -5,9 +5,7 @@ import visualization as v
 
 DB_NAME = "fitness.db"
 
-# -------------------------
-# Main app
-# -------------------------
+
 def main():
     st.set_page_config(page_title="Fitness App", layout="wide")
     dh.create_tables()

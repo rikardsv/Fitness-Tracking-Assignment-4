@@ -1,9 +1,7 @@
 import pandas as pd
 import databaseHelpers as dh
 
-# -------------------------
-# User queries
-# -------------------------
+
 def fetch_users():
     conn = dh.get_connection()
     df = pd.read_sql_query("SELECT * FROM User ORDER BY UserID", conn)
@@ -75,10 +73,6 @@ def delete_user(user_id):
     conn.commit()
     conn.close()
 
-
-# -------------------------
-# HealthMetric queries
-# -------------------------
 def fetch_health_metrics():
     conn = dh.get_connection()
     query = """
@@ -96,7 +90,6 @@ def fetch_health_metrics():
     df = pd.read_sql_query(query, conn)
     conn.close()
     return df
-
 
 def insert_health_metric(user_id, metric_type, metric_value):
     conn = dh.get_connection()
@@ -119,7 +112,6 @@ def update_health_metric(metric_id, user_id, metric_type, metric_value):
     """, (user_id, metric_type, metric_value, metric_id))
     conn.commit()
     conn.close()
-
 
 def delete_health_metric(metric_id):
     conn = dh.get_connection()

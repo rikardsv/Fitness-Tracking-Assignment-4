@@ -3,9 +3,7 @@ import streamlit as st
 import plotly.express as px
 import databaseHelpers as dh
 
-# -------------------------
-# Page function: Visualization
-# -------------------------
+
 def visualization_page():
     st.subheader("Health Metrics by Activity Level")
 
@@ -68,9 +66,6 @@ ORDER BY AvgMetricValue DESC
 """, language="sql")
 
 
-# -------------------------
-# Visualization queries
-# -------------------------
 def get_metric_types():
     conn = dh.get_connection()
     df = pd.read_sql_query("""
@@ -109,4 +104,3 @@ def fetch_metric_by_activity_level(metric_type):
     df = pd.read_sql_query(query, conn, params=(metric_type,))
     conn.close()
     return df
-

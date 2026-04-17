@@ -4,9 +4,6 @@ import streamlit as st
 import tableQueries as tq
 
 
-# -------------------------
-# Page functions: User
-# -------------------------
 def read_users_page():
     st.subheader("All Users")
     df = tq.fetch_users()
@@ -151,9 +148,6 @@ def delete_user_page():
         st.rerun()
 
 
-# -------------------------
-# Page functions: HealthMetric
-# -------------------------
 def read_health_metrics_page():
     st.subheader("All Health Metrics")
     df = tq.fetch_health_metrics()
@@ -230,7 +224,8 @@ def update_health_metric_page():
         metric_type = st.selectbox(
             "Metric Type",
             metric_types,
-            index=metric_types.index(selected_metric["MetricType"]) if selected_metric["MetricType"] in metric_types else 0
+            index=metric_types.index(selected_metric["MetricType"]) if selected_metric[
+                                                                           "MetricType"] in metric_types else 0
         )
 
         metric_value = st.number_input(

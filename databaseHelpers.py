@@ -2,15 +2,11 @@ import sqlite3
 import hashlib
 import os
 
-# Get the directory where this script is located
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-# Join it with the filename to get an absolute path
+
 DB_NAME = os.path.join(BASE_DIR, "fitness.db")
 
 
-# -------------------------
-# Database helpers
-# -------------------------
 def get_connection():
     conn = sqlite3.connect(DB_NAME, check_same_thread=False)
     conn.execute("PRAGMA foreign_keys = ON")
