@@ -26,3 +26,15 @@ The app implements CRUD operations for Users and Health Metrics, and includes a 
 ```
 
 ## Project Structure
+
+```
+│   .gitignore
+│   databaseHelpers.py
+│   fitness.db
+│   main.py
+│   pageFunctions.py
+│   README.md
+│   tableQueries.py
+│   visualization.py
+│
+```
