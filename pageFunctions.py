@@ -4,9 +4,7 @@ import streamlit as st
 import tableQueries as tq
 
 
-# -------------------------
 # Page functions: User
-# -------------------------
 def read_users_page():
     st.subheader("All Users")
     df = tq.fetch_users()
@@ -151,9 +149,7 @@ def delete_user_page():
         st.rerun()
 
 
-# -------------------------
 # Page functions: HealthMetric
-# -------------------------
 def read_health_metrics_page():
     st.subheader("All Health Metrics")
     df = tq.fetch_health_metrics()

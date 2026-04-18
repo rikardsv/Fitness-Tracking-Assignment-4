@@ -1,9 +1,8 @@
 import pandas as pd
 import databaseHelpers as dh
 
-# -------------------------
+#
 # User queries
-# -------------------------
 def fetch_users():
     conn = dh.get_connection()
     df = pd.read_sql_query("SELECT * FROM User ORDER BY UserID", conn)
@@ -76,9 +75,8 @@ def delete_user(user_id):
     conn.close()
 
 
-# -------------------------
+
 # HealthMetric queries
-# -------------------------
 def fetch_health_metrics():
     conn = dh.get_connection()
     query = """

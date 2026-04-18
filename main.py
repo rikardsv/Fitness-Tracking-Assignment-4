@@ -5,12 +5,11 @@ import visualization as v
 
 DB_NAME = "fitness.db"
 
-# -------------------------
 # Main app
-# -------------------------
 def main():
     st.set_page_config(page_title="Fitness App", layout="wide")
     dh.create_tables()
+    dh.seed_default_data()
 
     st.title("Fitness Tracker App")
     st.write("CRUD for User and HealthMetric, plus a Plotly visualization.")
